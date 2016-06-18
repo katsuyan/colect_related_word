@@ -6,6 +6,7 @@ import csv
 import sys
 import codecs
 
+# csvを一行ごとに取得するジェネレータ
 def unfussy_reader(csv_reader):
     while True:
         try:
@@ -14,6 +15,7 @@ def unfussy_reader(csv_reader):
             print("Problem with some row")
             continue
 
+# wikipediaAPIを利用し関連ワード取得
 def get_related_word(word):
     related_data = {}
     related_word_list = []
@@ -28,6 +30,7 @@ def get_related_word(word):
     return related_data
 
 
+# json形式で'word: [related_words]'の形で収集
 if __name__ == '__main__':
     with open("temp.csv", "w") as fout:
         fout.write("abc,def\nghi\x00,klm\n123,456")
