@@ -36,7 +36,7 @@ if __name__ == '__main__':
         related_word_file = open('related_word.json', 'w')
         related_word_file.write("{\"related\": [\n")
 
-        with open("mecab-user-dict-seed.20160616.csv") as fin:
+        with open(sys.argv[1]) as fin:
             reader = unfussy_reader(csv.reader(fin))
             for n, row in enumerate(reader):
                 keyword = row[0]
