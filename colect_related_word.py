@@ -2,11 +2,9 @@
 
 import urllib.request
 import urllib.parse
-import time
 import json
 import csv
 import sys
-import codecs
 
 class ColectRelatedWord:
     # csvを一行ごとに取得するジェネレータ
